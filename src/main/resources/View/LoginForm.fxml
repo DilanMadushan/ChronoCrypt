@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootNode" prefHeight="569.0" prefWidth="373.0" style="-fx-background-color: #d1d8e0;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Controller.LoginFormController">
+   <children>
+      <Pane prefHeight="569.0" prefWidth="373.0" style="-fx-background-color: red;">
+         <children>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="29.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ChronoCrypt" wrappingWidth="314.800048828125">
+               <font>
+                  <Font name="System Bold" size="51.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="39.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="txtName" focusColor="WHITE" layoutX="41.0" layoutY="295.0" onAction="#nameOnAction" prefHeight="34.0" prefWidth="300.0" style="-fx-border-color: white; -jfx-focus-color: white; -fx-background-color: transprnt;" unFocusColor="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <JFXButton buttonType="RAISED" layoutX="129.0" layoutY="405.0" onAction="#joinOnAction" prefHeight="37.0" prefWidth="129.0" style="-fx-background-radius: 30; -fx-border-color: white;" text="Join" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

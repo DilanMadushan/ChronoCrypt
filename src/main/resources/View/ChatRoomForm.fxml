@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootNode" prefHeight="712.0" prefWidth="451.0" style="-fx-background-color: red;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Controller.ChatRoomFormController">
+   <children>
+      <ScrollPane layoutX="27.0" layoutY="86.0" prefHeight="533.0" prefWidth="403.0">
+         <content>
+            <VBox fx:id="vBox" prefHeight="533.0" prefWidth="391.0" />
+         </content>
+      </ScrollPane>
+      <Pane prefHeight="82.0" prefWidth="451.0">
+         <children>
+            <Text fx:id="txtName" fill="WHITE" layoutX="67.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ChronoCrypt" wrappingWidth="367.2359924316406">
+               <font>
+                  <Font name="System Bold" size="53.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="30.0" layoutY="639.0" prefHeight="49.0" prefWidth="351.0" style="-fx-background-color: white;">
+         <children>
+            <TextField fx:id="txtMessage" layoutX="46.0" layoutY="2.0" onAction="#messageOnAction" prefHeight="44.0" prefWidth="255.0" promptText="Tpte a message" style="-fx-background-color: white;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></TextField>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="307.0" layoutY="8.0" onMouseClicked="#attachOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/paper-clip.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="4.0" layoutY="7.0" onMouseClicked="#emojiOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8-grinning-face-with-big-eyes-48.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <JFXButton layoutX="385.0" layoutY="638.0" onAction="#sendOnAction" prefHeight="49.0" prefWidth="58.0">
+         <font>
+            <Font size="1.0" />
+         </font>
+         <graphic>
+            <Pane prefHeight="51.0" prefWidth="50.0">
+               <children>
+                  <Circle fill="RED" layoutX="25.0" layoutY="26.0" radius="22.0" stroke="WHITE" strokeType="INSIDE" />
+                  <ImageView fitHeight="22.0" fitWidth="24.0" layoutX="15.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/send-message (2).png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </graphic>
+      </JFXButton>
+      <Pane fx:id="emojiPane" layoutX="35.0" layoutY="449.0" prefHeight="149.0" prefWidth="228.0" style="-fx-background-color: F3F3F3;">
+         <children>
+            <GridPane layoutX="-1.0" layoutY="-1.0" prefHeight="149.0" prefWidth="228.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <JFXButton fx:id="emoji1" prefHeight="49.0" prefWidth="117.0" text="😀">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="emoji2" layoutX="10.0" layoutY="11.0" prefHeight="49.0" prefWidth="117.0" text="😂" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="emoji3" layoutX="10.0" layoutY="11.0" prefHeight="49.0" prefWidth="117.0" text="😅" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="emoji4" layoutX="10.0" layoutY="11.0" prefHeight="49.0" prefWidth="117.0" text="😈" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="emoji5" layoutX="10.0" layoutY="11.0" prefHeight="49.0" prefWidth="117.0" text="😎" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="emoji6" layoutX="10.0" layoutY="11.0" prefHeight="49.0" prefWidth="117.0" text="😉" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
