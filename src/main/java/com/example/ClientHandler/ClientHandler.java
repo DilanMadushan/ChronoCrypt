@@ -46,6 +46,8 @@ public class ClientHandler {
                         String[] split = message.split(" :");
                         senderName = split[0];
 
+                        System.out.println(message);
+
                         broadcastMessage(message);
 
                     } catch (IOException e) {
